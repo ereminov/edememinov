@@ -1,52 +1,27 @@
+# Dit is een voorbeeld .gitignore bestand. 
+# Files in dit bestand worden niet in de GIT repository geplaatst.
+
+# Bestanden met de volgende extensie negeren
 *.class
+*.log
+.classpath
+.project
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# but do track lib.a, even though you're ignoring .a files above
+#!lib.a
 
-# Package Files #
-*.jar
-*.war
-*.ear
+# only ignore the root .metadata file, not subdir/.metadata
+/.metadata
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+# ignore all files in these directories
+bin/
+build/
+lib/
+.settings/
+.gradle/
 
-# =========================
-# Operating System Files
-# =========================
+# ignore doc/notes.txt, but not doc/server/arch.txt
+doc/*.txt
 
-# OSX
-# =========================
-
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Icon must ends with two \r.
-Icon
-
-# Thumbnails
-._*
-
-# Files that might appear on external disk
-.Spotlight-V100
-.Trashes
-
-# Windows
-# =========================
-
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
-
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+# ignore all .txt files in the doc/ directory
+doc/**/*.txt

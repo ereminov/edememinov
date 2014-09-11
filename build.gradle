@@ -1,0 +1,21 @@
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+
+    sourceCompatibility = 1.7
+    version = '1.0'
+
+	project.buildDir = 'bin'
+	
+    repositories {
+       mavenCentral()
+    }
+
+	dependencies {
+        testCompile 'junit:junit:4.11'
+    }
+
+    jar {
+        manifest.attributes provider: 'gradle'
+    }
+}
